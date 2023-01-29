@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+
+                }
+            }
+        }
+    </script>
+    <title>Grolin - Authentication Page</title>
+</head>
+<body>
+    <div class="container px-10 py-20 bg-zinc-800 ">
+        <img src="src/img/Logo.svg" alt="">
+        <h1 class="font-semibold text-white text-3xl my-5">Login</h1>
+        <p class="text-base text-slate-300">You can login with your registered account or quick login with your Google account.</p>
+        <button class="bg-slate-100 flex items-center py-3 w-full text-base font-semibold justify-center rounded-md text-slate-900 my-8"><img src="src/img/google.svg" width="30px" alt=""> Login With Google</button>
+        <div class="grid grid-cols-3 items-center">
+            <hr class="border-slate-600 border-1">
+            <p class="text-center text-white">or</p>
+            <hr class="border-slate-600 border-1">
+        </div>
+        <form class="my-3" action="">
+            <label for="name">
+                <span class="font-semibold text-white text-base">Name</span>
+                <input type="text" id="name" placeholder="Full Name .." class="w-full p-4 rounded-md mt-2 bg-zinc-500 focus:outline-none focus:ring-2 focus:ring-rose-500 text-white peer">
+                <p class="text-red-600 invisible mt-2 peer-invalid:visible">Name Invalid</p>
+            </label>
+            <label for="email">
+                <span class="font-semibold text-white text-base">Email</span>
+                <input type="email" id="email" placeholder="Email .." class="w-full p-4 rounded-md mt-2 bg-zinc-500 focus:outline-none focus:ring-2 focus:ring-rose-500 text-white peer">
+                <p class="text-red-600 invisible mt-2 peer-invalid:visible">Email Invalid</p>
+            </label>
+            <label for="password">
+                <div class="flex justify-between">
+                <span class="font-semibold text-white text-base">Password</span> 
+                </div>
+                <input type="password" id="password" placeholder="Password .." class="w-full p-4 rounded-md mt-2 bg-zinc-500 focus:outline-none focus:ring-2 focus:ring-rose-500 text-white peer">
+            </label>    
+        </form>
+        <div class="flex items-center mt-6">
+        <input type="checkbox" id="default-checkbox" value="" class="w-5 h-5">
+        <label for="default-checkbox" class="ml-3 font-semibold text-white text-sm">Agree with terms and conditions</label>
+        </div>
+        <button class="bg-rose-400 flex items-center py-4 w-full text-base font-semibold justify-center rounded-md text-slate-900 my-8">Register</button>
+        <p class="font-semibold text-slate-400 text-base text-center">Don’t have an account?<a href="" class="text-rose-400">  Create one!</a></p>
+    </div>
+</body>
+</html>
