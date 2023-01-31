@@ -5,6 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        /* For Webkit-based browsers (Chrome, Safari and Opera) */
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* For IE, Edge and Firefox */
+    .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    }
+    </style>
     <script>
         tailwind.config = {
             theme: {
@@ -17,16 +29,46 @@
     <title>Grolin - Authentication Page</title>
 </head>
 <body>
-    <div class="container px-10 py-20 bg-zinc-800 ">
-        <img src="src/img/Logo.svg" alt="">
-        <h1 class="font-semibold text-white text-3xl my-5">Login</h1>
-        <p class="text-base text-slate-300">You can login with your registered account or quick login with your Google account.</p>
-        <button class="bg-slate-100 flex items-center py-3 w-full text-base font-semibold justify-center rounded-md text-slate-900 my-8"><img src="src/img/google.svg" width="30px" alt=""> Login With Google</button>
-        <div class="grid grid-cols-3 items-center">
-            <hr class="border-slate-600 border-1">
-            <p class="text-center text-white">or</p>
-            <hr class="border-slate-600 border-1">
+    <div class="container bg-zinc-800 ">
+    <div class="bg-zinc-800 flex justify-between">
+        <!--Side Left-->
+        <div class="hidden md:block bg-gradient-to-br from-[#F4C395] to-[#F27F94] rounded-md w-1/2 m-4 pt-20 pl-16">
+            <img src="src/img/Logo-Black.svg" class="md:block hidden" alt="">
+        <p class=" font-semibold text-sm tracking-wider mt-10">ACCAUNT.IO</p>
+        <h2 class="font-medium text-4xl w-2/3">Manage multiple accounts in one place!</h2>
+        <div class="mt-24 -ml-16">
+            <div class="flex items-center overflow-x-scroll whitespace-nowrap scroll-smooth scroll scrollbar-hide">
+                <!--Card 1-->
+                <a href="https://www.facebook.com/" class="bg-rose-200 p-9 pt-7 rounded-md mr-10 shadow-xl w-full">
+                    <img src="src/img/facebook.svg" width="45px"  alt="">
+                    <h3 class="font-semibold text-base text-slate-900 mt-4">Facebook Account</h3>
+                    <p class="font-medium text-xs mt-2">Tweet, reply to tweet, manage DMs, <br> and more in a single dashboard.</p>
+                </a>
+                <!--Card 2-->
+                <a href="https://twitter.com" class="bg-rose-200 p-9 rounded-md mr-10 shadow-xl w-full">
+                    <img src="src/img/twitter 1.svg" alt="">
+                    <h3 class="font-semibold text-base text-slate-900 mt-5">Twitter Account</h3>
+                    <p class="font-medium text-xs mt-2">Tweet, reply to tweet, manage DMs, <br> and more in a single dashboard.</p>
+                </a>
+                <!--Card 3-->
+                <a href="https://www.instagram.com/" class="bg-rose-200 p-9 rounded-md shadow-xl w-full">
+                    <img src="src/img/insta.svg" alt="">
+                    <h3 class="font-semibold text-base text-slate-900 mt-3">Instagram Account</h3>
+                    <p class="font-medium text-xs mt-2">Post a story, manage DMs, and <br> more in a single dashboard.</p>
+                </a>
+            </div>
         </div>
+        <div class="font-semibold text-xs flex items-center mt-48">
+            <p>PRIVACY POLICY</p>
+            <p class="w-1 h-1 bg-black rounded-full mx-2"></p>
+            <p>TERMS OF SERVICE</p>
+        </div>
+        </div>
+        <!--Form-->
+        <div class="md:p-20 md:w-9/12 px-10 py-20">
+        <img src="src/img/Logo.svg" class="md:hidden" alt="">
+        <h1 class="font-semibold text-white text-3xl my-5">Register</h1>
+        <p class="text-base text-slate-300">You can login with your registered account or quick login with your Google account.</p>
         <form class="my-3" action="">
             <label for="name">
                 <span class="font-semibold text-white text-base">Name</span>
@@ -50,7 +92,9 @@
         <label for="default-checkbox" class="ml-3 font-semibold text-white text-sm">Agree with terms and conditions</label>
         </div>
         <button class="bg-rose-400 flex items-center py-4 w-full text-base font-semibold justify-center rounded-md text-slate-900 my-8">Register</button>
-        <p class="font-semibold text-slate-400 text-base text-center">Have an account?<a href="" class="text-rose-400">  Login!</a></p>
+        <p class="font-semibold text-slate-400 text-base text-center">Have an account?<a href="index.html" class="text-rose-400">  Login!</a></p>
+        </div>
+    </div>
     </div>
 </body>
 </html>
